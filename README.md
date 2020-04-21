@@ -1,10 +1,10 @@
 # heroku-buildpack-nano
 
-Heroku buildpack that installs Nano text editor
+Heroku buildpack that installs Nano text editor, inspired by [Ehryk's](https://github.com/Ehryk) repository [heroku-nano](https://github.com/Ehryk/heroku-nano/)
 
 ## How it works
 
-Installs Nano Ninja version from [Ehryk's](https://github.com/Ehryk) repository [heroku-nano](https://github.com/Ehryk/heroku-nano/) or if you prefer you can set a config var to download Nano from a custom location.
+Installs Nano Ninja version from Github repository [heroku-buildpack-nano](https://github.com/smf-distribution/heroku-buildpack-nano/) or if you prefer you can set a config var to download Nano from a custom location.
 
 Nano installation ends in `/app/vendor/nano` directory.
 
@@ -13,7 +13,7 @@ Nano installation ends in `/app/vendor/nano` directory.
     -----> Build succeeded!
     -----> heroku-buildpack-nano app detected
         -> Custom nano URL is not set, start downloading from default location
-        -> Downloading Nano... (https://github.com/Ehryk/heroku-nano/raw/master/heroku-nano-2.5.1/nano.tar.gz)
+        -> Downloading Nano... (https://github.com/smf-distribution/heroku-buildpack-nano/raw/master/nano.tar.gz)
         -> Installing Nano...
         DONE
     -----> Discovering process types
@@ -21,7 +21,7 @@ Nano installation ends in `/app/vendor/nano` directory.
 ## Configure from CLI
 
 ```bash
-heroku buildpacks:add https://github.com/velizarn/heroku-buildpack-nano
+heroku buildpacks:add https://github.com/smf-distribution/heroku-buildpack-nano
 ```
 
 ## Configure from app manifest
@@ -30,7 +30,7 @@ heroku buildpacks:add https://github.com/velizarn/heroku-buildpack-nano
 {
     "buildpacks": [
         {
-            "url": "https://github.com/velizarn/heroku-buildpack-nano"
+            "url": "https://github.com/smf-distribution/heroku-buildpack-nano"
         }
     ]
 }
@@ -63,4 +63,4 @@ heroku config:set NANO_URL_CUSTOM=https://your-custom-url.domain.tld/nano.tar.gz
 
 ## License
 
-MIT © [Velizar Nenov](https://github.com/velizarn)
+MIT © [SMF Distribution](https://github.com/smf-distribution)

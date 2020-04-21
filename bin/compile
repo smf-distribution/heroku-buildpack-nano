@@ -28,7 +28,7 @@ export_env_dir $ENV_DIR
 if [ -z "$NANO_URL_CUSTOM" ]; then
   echo "    -> Custom nano URL is not set, start downloading from default location"
   NANO_FILENAME='nano.tar.gz'
-  NANO_URL="https://github.com/Ehryk/heroku-nano/raw/master/heroku-nano-2.5.1/$NANO_FILENAME"
+  NANO_URL="https://github.com/smf-distribution/heroku-buildpack-nano/raw/master/$NANO_FILENAME"
 else
   NANO_FILENAME=$(basename $NANO_URL_CUSTOM)
   NANO_URL="$NANO_URL_CUSTOM"
